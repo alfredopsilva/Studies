@@ -1,0 +1,12 @@
+@model dynamic
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h1 class="mt-3">Regions</h1>
+@if (ViewBag.Response is not null)
+{
+    <p>@ViewBag.Response</p>
+}

@@ -1,0 +1,4 @@
+2023-11-27 10:15:59.886 -05:00 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM [Regions]
+WHERE [Id] = '77a2669d-a009-495a-a413-a831f1538cd1';
+SELECT @@ROWCOUNT;
