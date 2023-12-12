@@ -20,6 +20,7 @@ public class BugController : BaseApiController
   {
     return "secret text";
   }
+  
   [HttpGet("not-found")]
   public ActionResult<AppUser> GetNotFound()
   {
