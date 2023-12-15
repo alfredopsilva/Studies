@@ -9,6 +9,7 @@ import { authGuard } from './_guards/auth.guard';
 import { TestErrorComponent } from './errors/test-error/test-error.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
 
 const routes: Routes = [
   {
@@ -25,8 +26,12 @@ const routes: Routes = [
         component: MemberListComponent,
       },
       {
-        path: 'members/:id',
+        path: 'members/:username',
         component: MemberDetailComponent
+      },
+      {
+        path: 'member/edit',
+        component: MemberEditComponent
       },
       {
         path: 'lists',
