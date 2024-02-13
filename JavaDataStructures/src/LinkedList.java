@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.HashSet;
+
 class Node {
     int value;
     Node next;
@@ -59,23 +63,24 @@ public class LinkedList {
         length++;
     }
 
-    public Node removeLast(){ 
-        if(length == 0) return null; 
-        Node temp = head; 
-        Node pre = head; 
-        while(temp.next != null){ 
-            pre = temp; 
-            temp = temp.next; 
+    public Node removeLast() {
+        if (length == 0)
+            return null;
+        Node temp = head;
+        Node pre = head;
+        while (temp.next != null) {
+            pre = temp;
+            temp = temp.next;
         }
-        tail = pre; 
-        tail.next = null; 
-        length--; 
-        if(length == 0){ 
+        tail = pre;
+        tail.next = null;
+        length--;
+        if (length == 0) {
             head = null;
-            tail = null; 
+            tail = null;
         }
 
-        return temp; 
+        return temp;
     }
 
     public void prepend(int value) {
@@ -162,22 +167,63 @@ public class LinkedList {
         prev.next = temp.next;
         temp.next = null;
         length--;
-
         return temp;
     }
 
-    public void reverse(){ 
-        Node temp = head; 
-        head = tail; 
-        tail = temp; 
-        Node after = temp.next; 
-        Node before = null; 
+    public void reverse() {
+        Node temp = head;
+        head = tail;
+        tail = temp;
+        Node after = temp.next;
+        Node before = null;
 
-        for(int i = 0; i < length; i++){ 
-            after = temp.next; 
-            temp.next = before; 
-            before = temp; 
-            temp = after;  
+        for (int i = 0; i < length; i++) {
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
         }
+    }
+
+    public void partitionList(int x) {
+        Node temp = head;
+        Node dummySmaller = new Node(0); 
+        Node smaller = dummySmaller;
+        Node dummyGreater = new Node(0); 
+        Node greater = dummyGreater;
+
+        while (temp != null) {
+            if (temp.value < x) {
+                smaller.next = temp;
+                smaller = smaller.next; 
+            } 
+            else {
+                greater.next = temp; 
+                greater = greater.next; 
+            }
+            temp = temp.next; 
+        }
+
+        greater.next = null; 
+        smaller.next = dummyGreater.next; 
+        head = dummySmaller.next;
+
+
+        printList();
+    }
+
+    public void removeDuplicates(){
+        Node temp = head;
+        Node newHead = new Node(0);  
+        ArrayList<Integer> nodes = new ArrayList<>(); 
+        
+        while(temp != null && !nodes.contains(temp.value)){ 
+            nodes.add(temp.value);
+            newHead.next = temp.next; 
+            newHead = temp; 
+            temp = temp.next; 
+        }
+
+        printList();
     }
 }
