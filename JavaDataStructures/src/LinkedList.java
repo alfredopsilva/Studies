@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.HashSet;
 
 class Node {
     int value;

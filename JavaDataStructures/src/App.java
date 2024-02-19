@@ -1,12 +1,11 @@
 public class App {
-    public static void main(String[] args) throws Exception {
-        LinkedList LL = new LinkedList(3); 
-        LL.append(8);
-        LL.append(5);
-        LL.append(10);
-        LL.append(2);
-        LL.append(1);
+  public static void main(String[] args) throws Exception {
 
-        LL.removeDuplicates(); 
-    }
+    DoublyLinkedList myDLL = new DoublyLinkedList(19);
+   myDLL.append(120);
+    myDLL.printList();
+    System.out.println("Removing");
+    myDLL.removeLast(); 
+    myDLL.printList();
+  }
 }
