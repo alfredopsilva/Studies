@@ -1,0 +1,5 @@
+/home/alfredo/Code/Studies/CSharpDataStructures/obj/Debug/net8.0/CSharpDataStructures.GeneratedMSBuildEditorConfig.editorconfig
+/home/alfredo/Code/Studies/CSharpDataStructures/obj/Debug/net8.0/CSharpDataStructures.AssemblyInfoInputs.cache
+/home/alfredo/Code/Studies/CSharpDataStructures/obj/Debug/net8.0/CSharpDataStructures.AssemblyInfo.cs
+/home/alfredo/Code/Studies/CSharpDataStructures/obj/Debug/net8.0/CSharpDataStructures.csproj.CoreCompileInputs.cache
+/home/alfredo/Code/Studies/CSharpDataStructures/obj/Debug/net8.0/CSharpDataStructures.sourcelink.json
