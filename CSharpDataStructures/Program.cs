@@ -1,10 +1,16 @@
-﻿namespace CSharpDataStructures;
+﻿using System.Collections;
+
+namespace CSharpDataStructures;
 
 class Program
 {
   static void Main(string[] args)
   {
-    Console.WriteLine("Hello, World!");
-
+    ArrayList? test;
+    test = MergeSortedArrays.returnSortedArray(new ArrayList { 12, 2, 4, 5 }, new ArrayList { 3, 10, 20, 50 });
+    for (var i = 0; i < test.Count; i++)
+    {
+      System.Console.WriteLine(test[i]);
+    }
   }
 }
